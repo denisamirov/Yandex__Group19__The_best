@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
@@ -68,8 +69,4 @@
     font-size: 77px;
     font-family: "Amatic SC";
     align-items: center;
-}
-
-a {
-    text-decoration: none;
 }
