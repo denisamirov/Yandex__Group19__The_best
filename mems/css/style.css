@@ -93,7 +93,7 @@ h3 {
 
 .cards-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: calc(100vh - var(--header-height) - var(--footer-height));
   padding-block: 32px;
@@ -103,6 +103,7 @@ h3 {
 .card {
   display: flex;
   flex-direction: column;
+  max-width: 650px;
 }
 
 .card__about {
@@ -112,10 +113,6 @@ h3 {
   font-weight: 400;
   padding: 32px 24px;
   margin: 0;
-}
-
-.card__img {
-  height: 400px;
 }
 
 .footer {
