@@ -69,3 +69,7 @@
     font-family: "Amatic SC";
     align-items: center;
 }
+
+a {
+    text-decoration: none;
+}
