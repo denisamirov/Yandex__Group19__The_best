@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Inter:wght@300&family=Press+Start+2P&display=swap");
+
+:root {
+  --black: #121723;
+  --header-height: 110px;
+  --footer-height: 142px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-family: "Amatic SC", sans-serif;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff3dfe;
+  height: var(--header-height);
+}
+
+.header__title {
+  color: var(--black);
+  font-size: 77px;
+  font-weight: 400;
+}
+
+.main {
+  background: linear-gradient(
+    166deg,
+    rgba(64, 180, 210, 1) 22%,
+    rgba(208, 88, 203, 1) 49%,
+    rgba(133, 69, 252, 1) 78%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+.card__about {
+  background-color: #ffed00;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 32px 24px;
+  margin: 0;
+}
+
+.card__img {
+}
+
+.footer {
+  background-color: #000;
+}
+
+.footer__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 55px;
+  font-weight: 400;
+  height: var(--footer-height);
+}
+
+
+.card-full {
+
+}
+
+.card-full__img {
+	height: 728px;
+}
+
+.card-full__about {
+}
