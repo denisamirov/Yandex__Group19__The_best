@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    min-height: 100vh;
+}
+
+
+.container__header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #FF3DFE;  
+  height: 109px;
+  align-items: center;
+}
+
+.container__header p {
+    font-size: 77px;
+    font-family: "Amatic SC";
+}
+
+.container__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 364px;
+    max-height: 346px;
+    background-color: #24FF00; 
+}
+
+.card__text {
+    font-family: "press start 2p";
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    max-width: 323px;
+    height: 92px;
+}
+
+.container__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 142px;
+    font-size: 77px;
+    font-family: "Amatic SC";
+    align-items: center;
+}
