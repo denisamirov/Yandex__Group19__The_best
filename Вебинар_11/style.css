@@ -1,0 +1,93 @@
+.container__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px auto;
+}
+body{
+    background: linear-gradient(orange ,pink) fixed;
+    font-family: "Anonymous Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Anonymous Pro", sans-serif;
+    src: url(fonts/AnonymousPro-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  .content_header {
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 140px 0px 140px;
+    background-color: white;
+}
+
+.logo_header {
+    display: flex;
+    width: 215px;
+    height: 64px;
+}
+
+.navbar {
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.search{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 25px;
+    width: 180px;
+}
+.base_footer {
+    background-color: #121723;
+    
+}
+
+.content_footer {
+    display: flex;
+    flex-direction: column;
+    height: 151px;
+    padding: 32px 140px 32px 140px;
+    gap: 32px;
+}
+
+.top-box {
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_footer {
+    box-sizing: border-box;
+    width: 300px;
+    height: 22px;
+    display: flex;
+}
+
+.socials_footer {
+    box-sizing: border-box;
+    color: white;
+}
+
+hr {
+    color: #676B73;
+}
+
+.last_logo {
+    color: #676B73;
+    display: flex;
+    justify-content: center;
+}
+
