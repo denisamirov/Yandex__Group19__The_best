@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(45/PressStart2P-Regular.ttf)
+}
+
+@import url(/45/PressStart2P-Regular.ttf);
+
+   
+
+
+
+* {  
+margin: 0;
+padding: 0;
+
+}
+
+.button_search { 
+
+display: flex;
+
+
+}
+
+.container__cards { 
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+justify-content: center;
+margin: 10px auto;
+align-items: center;
+border-radius: 20px;
+
+
+}
+
+#text_field{
+    display: flex;
+    
+}
+
+input {
+
+width: 200px;
+height: 30px;
+}
+
+
+.search { 
+
+display: flex;
+margin: 40px;
+gap: 10px;
+width: 450px;
+justify-content: center;
+margin-left: 750px;
+
+}
+
+h3{
+    display: flex;
+    font-size: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Press Start 2P";
+    height: 20px;
+}
+
+img { 
+
+border-radius: 20px;
+width: 340px;
+height: 500px;
+}
+
+.card { 
+background-color: silver;
+border-radius: 20px;
+
+}
