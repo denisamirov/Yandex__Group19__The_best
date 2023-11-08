@@ -32,9 +32,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 10px;
 }
 
-header {
+.header {
     height: 80px;
     background-color: bisque;
+}
+
+.text_field {
+    border-radius: 10px;
 }
