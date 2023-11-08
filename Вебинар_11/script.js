@@ -15,6 +15,7 @@ function search() {
             containerCards.insertAdjacentHTML("afterbegin", `<div class="card">
                                         <img src="${data.Search[i].Poster}">
                                         <h3>${data.Search[i].Title}</h3>
+										<h4>Год: ${data.Search[i].Year}</h4>
                                 </div>`)
         }
         
