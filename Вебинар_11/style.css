@@ -27,11 +27,52 @@
 }
 
 .card {
-  max-width: 300px;
+  max-width: calc(100vw / 5);
   border-radius: 5px;
   padding: 20px;
   height: fit-content;
   box-shadow: 0 0 10px #fff;
 
   background-color: #fff;
+}
+
+.card img {
+	width: 100%;
+}
+
+@media (width <= 900px) {
+	.card h3 {
+		font-size: .9em;
+	}
+}
+
+@media (width <= 768px) {
+	.container__cards {
+		grid-template: auto / repeat(2, 1fr);
+		padding: 25px 50px;
+	}
+
+	.card {
+		max-width: calc(100vw / 3);
+	}
+}
+
+@media (width <= 600px) {
+	.card h3 {
+		font-size: 0.8em;
+	}
+}
+
+@media (width <= 500px) {
+	.container__cards {
+		grid-template: auto / 1fr;
+	}
+
+	.card {
+		max-width: calc(100vw * 0.5);
+	}
+
+	.card h3 {
+		font-size: 1.2em;
+	}
 }
