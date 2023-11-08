@@ -1,0 +1,26 @@
+.container__cards {
+  display: grid;
+  grid-template: auto / repeat(3, 1fr);
+  gap: 25px;
+  justify-items: center;
+
+  margin-block: 30px;
+  padding: 50px 100px;
+
+  background: linear-gradient(
+    165deg,
+    rgba(64, 210, 142, 1) 25%,
+    rgba(83, 96, 159, 1) 50%,
+    rgba(144, 109, 26, 1) 75%
+  );
+}
+
+.card {
+  max-width: 300px;
+  border-radius: 5px;
+  padding: 20px;
+  height: fit-content;
+  box-shadow: 0 0 10px #fff;
+
+  background-color: #fff;
+}
