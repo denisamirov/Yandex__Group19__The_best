@@ -5,8 +5,16 @@
     margin: 0;
 }
 
+.main {
+    flex-grow: 1;
+}
+
 body {
     font-family: 'Anonymous Pro', monospace;
+    background-color: lightblue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container__cards {
@@ -35,7 +43,7 @@ body {
     margin-top: 10px;
 }
 
-header {
+.header {
     font-size: 60px;
     display: flex;
     flex-wrap: wrap;
@@ -48,10 +56,26 @@ header {
 .text_field {
     border-radius: 10px;
     width: 400px;
-    margin-left: 35px;
+    margin-left: 10px;
+    height: 50px;
 }
 
 .button_search {
     width: 100px;
     border-radius: 5px;
+}
+
+.footer {
+    height: 200px;
+    background-color: rgb(77, 211, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    flex-shrink: 0;
+}
+
+.name {
+    text-decoration: none;
+    color: black;
 }
