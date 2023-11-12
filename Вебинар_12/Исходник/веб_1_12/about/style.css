@@ -257,3 +257,27 @@ footer .nav-link {
     transition-duration: 300ms;
 }
 
+@media screen and (max-width: 376px)  {
+    main {
+        flex-direction: column;
+
+    }
+    header{
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    footer{
+        flex-direction: column;
+    }
+    .header-container{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .container_about{
+        max-width: 343px;
+    }
+
+}
