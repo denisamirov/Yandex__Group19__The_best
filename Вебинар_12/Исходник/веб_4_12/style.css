@@ -291,3 +291,20 @@ footer .nav-link {
     font-size: 30px;
     border-bottom: 1px solid #000000;
 }
+
+
+@media screen and (width <= 870px) {
+    .content__field {
+        width: 100%;
+        background-color: brown;
+    }
+
+    .sneaker-image1 {
+        width: 100%;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+    }
+}
