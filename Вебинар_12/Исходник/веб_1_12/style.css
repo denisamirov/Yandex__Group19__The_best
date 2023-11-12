@@ -47,8 +47,30 @@
     max-width: 364px;
     max-height: 346px;
     background-color: #24FF00; 
-    transition-duration: 2s;
+    transition-duration: 1s;
 }
+
+.card:hover {
+    box-shadow: 15px 15px red;
+    /* transition-duration: 1s;
+    transform: translateY(15px); */
+    animation: back 2s ease-in;
+}
+
+@keyframes back {
+    0% {
+        box-shadow: 15px 15px red;
+    }
+
+    50% {
+        box-shadow: 15px 15px grey;
+    }
+
+    100% {
+        box-shadow: 15px 15px red;
+    }
+}
+
 
 .card__text {
     font-family: "press start 2p";
@@ -138,5 +160,6 @@
 .detail__text p {
     font-family: "Inter";
     font-size: 30px;
+    transform: translateY(12px);
 }
 
