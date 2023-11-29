@@ -6,6 +6,7 @@
 ### [Презентация №11](https://audience.ahaslides.com/jw2sz8fn1f) ###
 ### [Презентация №12](https://audience.ahaslides.com/htjkkprncp) ###
 ### [Презентация №13](https://audience.ahaslides.com/p8gdrzhmmv) ###
+### [Презентация №17](https://presenter.ahaslides.com/presentation/5086460) ###
 
 
 
