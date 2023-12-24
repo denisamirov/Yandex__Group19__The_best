@@ -1,0 +1,52 @@
+{
+	// Place your Пример №2 workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"veb_5_1": {
+		"scope": "javascript,typescript",
+		"prefix": "veb_5_1",
+		"body": [
+			"let englishWords = ['pen', 'pineannple', 'apple', 'pear'];",
+			""
+			"$1"
+		],
+		"description": "Log output to console"
+	},
+	"veb_5_2": {
+		"scope": "javascript,typescript",
+		"prefix": "veb_5_2",
+		"body": [
+			"let russianWords = ['ручка', 'ананас', 'яблоко', 'груша'];",
+			""
+			"$1"
+		],
+		"description": "Log output to console"
+	},
+	"veb_5_3": {
+		"scope": "javascript,typescript",
+		"prefix": "veb_5_3",
+		"body": [
+			"let wordsContainer = document.getElementById('wordsContainer');",
+			""
+			"$1"
+		],
+		"description": "Log output to console"
+	},
+	"veb_5_4": {
+		"scope": "javascript,typescript",
+		"prefix": "veb_5_4",
+		"body": [
+			" for (let i = 0; i < englishWords.length; i++) {"
+				"let wordBlock = document.createElement('div');"
+				"let wordBlockHTML = '<h3>' + englishWords[i] + '</h3>' + '<p>' + russianWords[i] + '</p>';"
+				"wordBlock.innerHTML = wordBlockHTML;"
+				"wordsContainer.appendChild(wordBlock);"
+			"}"
+		],
+		"description": "Log output to console"
+	},
+}
