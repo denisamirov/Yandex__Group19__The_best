@@ -76,3 +76,42 @@ button{
     color: #00ADB5;
     background-color: #393E46;
 }
+
+.modal {
+	background-color: rgb(204, 204, 204);
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 50px 100px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+
+	position: relative;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+
+	transition-duration: .3s;
+
+	opacity: 0;
+	visibility: hidden;
+
+	width: 500px;
+}
+.modal__input-container {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.modal__input {
+}
+.modal__button {
+}
+
+.modal__close {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	width: fit-content;
+}

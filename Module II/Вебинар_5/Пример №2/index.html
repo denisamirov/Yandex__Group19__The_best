@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вебинар №5</title>
-    <link rel="stylesheet" href="./style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Вебинар №5</title>
+	<link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div id="wordsContainer"></div>
-      
-        <form class="addWordForm" id="wordForm">
-          <input type="text" id="englishWordInput" placeholder="Слово на английском">
-          <input type="text" id="russianWordInput" placeholder="Слово на русском">
-          <button type="submit" id="addButton">Добавить слово</button>
-        </form>
-      </div>
-    <script src="script.js"></script>
+	<div class="container">
+		<div id="wordsContainer"></div>
+
+		<form class="addWordForm" id="wordForm">
+			<input type="text" id="englishWordInput" placeholder="Слово на английском">
+			<input type="text" id="russianWordInput" placeholder="Слово на русском">
+			<button type="submit" id="addButton">Добавить слово</button>
+		</form>
+
+		<form class="modal" id="modalForm">
+			<button type="button" id="modalClose" class="modal__close">X</button>
+			<div class="modal__input-container">
+				<label for="english">Слово на английском:</label>
+				<input type="text" name="english" class="modal__input">
+			</div>
+			<div class="modal__input-container">
+				<label for="russian">Слово на русском:</label>
+				<input type="text" name="russian" class="modal__input">
+			</div>
+			<button class="modal__button">Сохранить</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
 </body>
+
 </html>
