@@ -13,6 +13,7 @@ const modalForm = document.getElementById("modalForm");
 
  for (let i = 0; i < englishWords.length; i++) {
     let wordBlock = document.createElement('div');
+	wordBlock.title = "Дважды кликните, чтобы удалить";
     let wordBlockHTML = '<h3>' + englishWords[i] + '</h3>' + '<p>' + russianWords[i] + '</p>';
 	wordBlock.classList.add("wordBlockHTML");
     wordBlock.innerHTML = wordBlockHTML;
@@ -47,6 +48,7 @@ form.addEventListener("submit", (e) => {
 	russianWords.push(russianWordInput.value);
 
 	let wordBlock = document.createElement('div');
+	wordBlock.title = "Дважды кликните, чтобы удалить";
 	let wordBlockHTML = '<h3>' + englishWordInput.value + '</h3>' + '<p>' + russianWordInput.value + '</p>';
 
 	wordBlock.classList.add("wordBlockHTML");
