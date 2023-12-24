@@ -22,11 +22,11 @@ const modalForm = document.getElementById("modalForm");
 		modalForm.style.visibility = 'visible';
 		modalForm.style.opacity = '1';
 
-		let modalInputEnglish = document.getElementsByName("english")[0];
-		let modalInputRussian = document.getElementsByName("russian")[0];
+		let modalInputEnglish = document.getElementById("modalInputEnglish");
+		let modalInputRussian = document.getElementById("modalInputRussian");
 
-		modalInputEnglish.value = englishWordInput.value;
-		modalInputRussian.value = russianWordInput.value;
+		modalInputEnglish.value = wordBlock.querySelector("h3").textContent;
+		modalInputRussian.value = wordBlock.querySelector("p").textContent;
 	})
 }
 
@@ -55,11 +55,11 @@ form.addEventListener("submit", (e) => {
 		modalForm.style.visibility = 'visible';
 		modalForm.style.opacity = '1';
 
-		let modalInputEnglish = document.getElementsByName("english")[0];
-		let modalInputRussian = document.getElementsByName("russian")[0];
+		let modalInputEnglish = document.getElementById("modalInputEnglish");
+		let modalInputRussian = document.getElementById("modalInputRussian");
 
-		modalInputEnglish.value = englishWordInput.value;
-		modalInputRussian.value = russianWordInput.value;
+		modalInputEnglish.value = wordBlock.querySelector("h3").textContent;
+		modalInputRussian.value = wordBlock.querySelector("p").textContent;
 	})
 })
 
