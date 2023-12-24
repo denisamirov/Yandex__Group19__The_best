@@ -16,7 +16,9 @@ body{
     gap: 32px;
 
     font-family: sans-serif;
+
 }
+
 #wordsContainer > div{
     padding: 8px;
     display: flex;
@@ -40,7 +42,19 @@ body{
     align-items: center;
 
     gap: 8px;
+
 }
+
+.wordBlockHTML {
+	cursor: pointer;
+	transition: all linear 0.3s;
+}
+
+.wordBlockHTML:hover {
+	translate: 5px 5px;
+	background-color: rgba(255, 0, 0, 0.5) !important;
+}
+
 input, button{
     padding: 8px;
     border: none;
