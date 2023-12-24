@@ -81,4 +81,7 @@ document.getElementById("modalForm").addEventListener("submit", (e) => {
 
 	selectedWord.querySelector("h3").textContent = modalInputEnglish.value;
 	selectedWord.querySelector("p").textContent = modalInputRussian.value;
+
+	modalForm.style.visibility = 'hidden';
+	modalForm.style.opacity = '0';
 })
