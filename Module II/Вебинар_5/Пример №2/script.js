@@ -4,6 +4,10 @@ let russianWords = ['ручка', 'ананас', 'яблоко', 'груша'];
 
 let wordsContainer = document.getElementById('wordsContainer');
 
+
+// Выбранная карточка
+let selectedWord = null;
+
 // Модальное окно
 const modalForm = document.getElementById("modalForm");
 
@@ -27,6 +31,8 @@ const modalForm = document.getElementById("modalForm");
 
 		modalInputEnglish.value = wordBlock.querySelector("h3").textContent;
 		modalInputRussian.value = wordBlock.querySelector("p").textContent;
+
+		selectedWord = wordBlock;
 	})
 }
 
@@ -60,10 +66,19 @@ form.addEventListener("submit", (e) => {
 
 		modalInputEnglish.value = wordBlock.querySelector("h3").textContent;
 		modalInputRussian.value = wordBlock.querySelector("p").textContent;
+
+		selectedWord = wordBlock;
 	})
 })
 
 document.getElementById("modalClose").addEventListener("click", () => {
 	modalForm.style.visibility = 'hidden';
 	modalForm.style.opacity = '0';
+})
+
+document.getElementById("modalForm").addEventListener("submit", (e) => {
+	e.preventDefault();
+
+	selectedWord.querySelector("h3").textContent = modalInputEnglish.value;
+	selectedWord.querySelector("p").textContent = modalInputRussian.value;
 })
