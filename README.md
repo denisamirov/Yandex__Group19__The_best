@@ -2,11 +2,9 @@
 ### [Обратная связь по вебинару](https://forms.yandex.ru/surveys/13480691.5a5a08a14e9f84a6f39a5276142af8d1c34cde62/) ###
 ---------------------------------------------
 
-Занятие 4. JS 20.12.2023
-1. [codesandbox](https://codesandbox.io/p/sandbox/js-event-examples-z9k7qj?file=%2Fsrc%2Findex.js%3A8%2C1-8%2C45)
-2. [Презентация №4](https://ahaslides.com/EF3YP)
-3. [Полезная статья](https://learn.javascript.ru/introduction-browser-events)
-4. [Бот liveDigital. Если будут проблемы](https://discord.com/channels/1155224985393188945/1155224988295647414/1186767421160312905)
+Занятие 6. JS 27.12.2023
+1. [replit](https://replit.com/@andrejlabzen/JSObjectsweb7)
+2. [Бот liveDigital. Если будут проблемы](https://discord.com/channels/1155224985393188945/1155224988295647414/1186767421160312905)
 
 
 Презентации
@@ -22,6 +20,7 @@
 ### [Презентация №3](https://ahaslides.com/C2UDA) ###
 ### [Презентация №4](https://ahaslides.com/EF3YP) ###
 ### [Презентация №5](https://ahaslides.com/CN0Y4) ###
+### [Презентация №6](https://ahaslides.com/H3RZ8) ###
 
 ---------------------------------------------
 Ссылки к вебинарам
