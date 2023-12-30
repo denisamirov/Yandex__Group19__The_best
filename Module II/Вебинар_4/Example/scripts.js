@@ -9,6 +9,7 @@ button.onclick = simplyKey
 
 function simplyKey() {
     let a = document.createElement('div')
+    a.classList.add('example-class')
     a.innerHTML = `<h1>Hello ${name.value}! Привет ${sec_name.value}</h1>`
     container.appendChild(a)
 }
