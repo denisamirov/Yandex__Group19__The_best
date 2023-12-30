@@ -2,8 +2,8 @@
 ### [Обратная связь по вебинару](https://forms.yandex.ru/surveys/13480691.5a5a08a14e9f84a6f39a5276142af8d1c34cde62/) ###
 ---------------------------------------------
 
-Занятие 6. JS 27.12.2023
-1. [replit](https://replit.com/@andrejlabzen/JSObjectsweb7)
+Занятие 7. JS 30.12.2023
+1. [postman](https://www.postman.com/)
 2. [Бот liveDigital. Если будут проблемы](https://discord.com/channels/1155224985393188945/1155224988295647414/1186767421160312905)
 
 
@@ -21,6 +21,7 @@
 ### [Презентация №4](https://ahaslides.com/EF3YP) ###
 ### [Презентация №5](https://ahaslides.com/CN0Y4) ###
 ### [Презентация №6](https://ahaslides.com/H3RZ8) ###
+### [Презентация №7](https://ahaslides.com/8JBR4) ###
 
 ---------------------------------------------
 Ссылки к вебинарам
