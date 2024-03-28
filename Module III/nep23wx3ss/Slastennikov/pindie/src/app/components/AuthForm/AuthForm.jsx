@@ -1,7 +1,7 @@
 "use client";
 import Styles from "./AuthForm.module.css";
-import { useState,useEffect } from "react";
-import { authorize,isResponseOk } from "@/app/api/api-utils";
+import { useState, useEffect } from "react";
+import { authorize, isResponseOk, setJWT } from "@/app/api/api-utils";
 import { endpoints } from "@/app/api/config";
 
 export const AuthForm = (props) => {
@@ -15,10 +15,12 @@ export const AuthForm = (props) => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(authData)
     const userData = await authorize(endpoints.auth, authData);
 
+
     if (isResponseOk(userData)) {
-      setJWT(userData.jwt)//Установка токена
+      setJWT(userData.jwt)  //Установка токена
       setUserData(userData);
       props.setAuth(true);
       setMessage({ status: "success", text: "Вы авторизовались!" });
@@ -27,15 +29,15 @@ export const AuthForm = (props) => {
     }
   };
   useEffect(() => {
-    let timer; 
+    let timer;
     if (userData) {
       timer = setTimeout(() => {
-              /* В props close лежит функция закрытия попапа */
+        /* В props close лежит функция закрытия попапа */
         props.close();
       }, 2000);
     }
     return () => clearTimeout(timer);
-  }, [userData]); 
+  }, [userData]);
   return (
     <form onSubmit={handleSubmit} className={Styles["form"]}>
       <h2 className={Styles["form__title"]}>Авторизация</h2>
@@ -56,6 +58,8 @@ export const AuthForm = (props) => {
             className={Styles["form__field-input"]}
             type="password"
             placeholder="***********"
+            name="password"
+            onInput={handleInput}
           />
         </label>
       </div>

@@ -20,9 +20,11 @@ export const Header = () => {
   };
 
   const pathname = usePathname();
+
   const handleLogout = () => {
     setIsAuthorized(false);
   };
+
   useEffect(() => {
     const handleAuthorized = async (jwt) => {
       const userData = await getMe(endpoints.me, jwt);
@@ -115,7 +117,7 @@ export const Header = () => {
         </ul>
         <div className={Styles["auth"]}>
           {isAuthorized ? (
-            <button className={Styles["auth__button"]} onClick={openPopup}>
+            <button className={Styles["auth__button"]} onClick={handleLogout}>
               Выйти
             </button>
           ) : (
