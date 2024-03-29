@@ -1,5 +1,5 @@
 "use client";
-import { getGameById } from "@/app/data/data-utils";
+
 import Styles from "./Game.module.css";
 import { GameNotFound } from "@/app/components/GameNotFound/GameNotFound";
 import { useRouter } from "next/navigation";
@@ -7,14 +7,18 @@ import { useEffect, useState } from "react";
 import { endpoints } from "@/app/api/config";
 import { getNormalizedGameDataById, isResponseOk } from "@/app/api/api-utils";
 import { Preloader } from "@/app/components/Preloader/Preloader";
-import { getJWT, getMe } from "@/app/api/api-utils";
+import { getJWT, getMe, removeJWT } from "@/app/api/api-utils";
 import { vote } from "@/app/api/api-utils";
 import { checkIfUserVoted } from "@/app/api/api-utils";
+
 export default function GamePage(props) {
   const router = useRouter();
   const [preloaderVisible, setPreloaderVisible] = useState(true);
+  const [isAuthorized, setIsAuthorized] = useState(false);  //Забыл назначить состояние
+  const [currentUser, setCurrentUser] = useState(null);     //Забыл назначить состояние
   const [game, setGame] = useState(null);
   const [isVoted, setIsVoted] = useState(false);
+
   useEffect(() => {
     async function fetchData() {
       const game = await getNormalizedGameDataById(
@@ -36,33 +40,40 @@ export default function GamePage(props) {
           setCurrentUser(userData);
         } else {
           setIsAuthorized(false);
-          removewat();
+          removeJWT();  //Неправильно написан метод для удаления JWT
         }
       });
     }
   }, []);
+
+  useEffect(() => {
+    if (currentUser && game) {
+      setIsVoted(checkIfUserVoted(game, currentUser.id));
+    }
+  }, [currentUser]);  //Делаем проверку проголосовал ли пользователь
 
   const handleVote = async () => {
     const jwt = getJWT();
     let usersIdArray = game.users.length
       ? game.users.map((user) => user.id)
       : [];
-  usersIdArray.push(currentUser.id);
-    // console.log(usersIdArray, game.id)
+    usersIdArray.push(currentUser.id);
+
     const response = await vote(
       `${endpoints.games}/${game.id}`,
       jwt,
       usersIdArray
-    );
-    if( isResponseOk(response)){
+    )
+
+    if (isResponseOk(response)) {
+      setIsVoted(true)  //Уставляем состояние голоса
       setGame({
         ...game,
-        users: isVoted ? 
-        game.users.filter((user) => {
-          return user.id !== currentUser.id
-        }) : [...game.users, currentUser]
+        users: isVoted ?
+          game.users.filter((user) => {
+            return user.id !== currentUser.id
+          }) : [...game.users, currentUser]
       })
-      setIsVoted(!isVoted)
     }
   }
 
