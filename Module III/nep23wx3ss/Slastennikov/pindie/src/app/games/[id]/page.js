@@ -7,12 +7,14 @@ import { useEffect, useState } from "react";
 import { endpoints } from "@/app/api/config";
 import { getNormalizedGameDataById, isResponseOk } from "@/app/api/api-utils";
 import { Preloader } from "@/app/components/Preloader/Preloader";
-
+import { getJWT, getMe } from "@/app/api/api-utils";
+import { vote } from "@/app/api/api-utils";
+import { checkIfUserVoted } from "@/app/api/api-utils";
 export default function GamePage(props) {
   const router = useRouter();
   const [preloaderVisible, setPreloaderVisible] = useState(true);
   const [game, setGame] = useState(null);
-
+  const [isVoted, setIsVoted] = useState(false);
   useEffect(() => {
     async function fetchData() {
       const game = await getNormalizedGameDataById(
@@ -24,6 +26,46 @@ export default function GamePage(props) {
     }
     fetchData();
   }, []);
+
+  useEffect(() => {
+    const jwt = getJWT();
+    if (jwt) {
+      getMe(endpoints.me, jwt).then((userData) => {
+        if (isResponseOk(userData)) {
+          setIsAuthorized(true);
+          setCurrentUser(userData);
+        } else {
+          setIsAuthorized(false);
+          removewat();
+        }
+      });
+    }
+  }, []);
+
+  const handleVote = async () => {
+    const jwt = getJWT();
+    let usersIdArray = game.users.length
+      ? game.users.map((user) => user.id)
+      : [];
+  usersIdArray.push(currentUser.id);
+    // console.log(usersIdArray, game.id)
+    const response = await vote(
+      `${endpoints.games}/${game.id}`,
+      jwt,
+      usersIdArray
+    );
+    if( isResponseOk(response)){
+      setGame({
+        ...game,
+        users: isVoted ? 
+        game.users.filter((user) => {
+          return user.id !== currentUser.id
+        }) : [...game.users, currentUser]
+      })
+      setIsVoted(!isVoted)
+    }
+  }
+
 
   return (
     <main className="main">
@@ -53,10 +95,11 @@ export default function GamePage(props) {
                 </span>
               </p>
               <button
+                disabled={!isAuthorized || isVoted}
                 className={`button ${Styles["about__vote-button"]}`}
-                onClick={() => router.push("/login")}
+                onClick={handleVote}
               >
-                Голосовать
+                {isVoted ? "Голос учтён" : "Голосовать"}
               </button>
             </div>
           </section>

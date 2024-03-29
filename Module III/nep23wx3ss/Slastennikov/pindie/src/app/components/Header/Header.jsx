@@ -37,7 +37,6 @@ export const Header = () => {
       }
     };
 
-
     const jwt = getJWT();
     if (jwt) {
       handleAuthorized(jwt);
